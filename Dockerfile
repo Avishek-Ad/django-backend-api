@@ -47,7 +47,7 @@ RUN pip install gunicorn
 # database isn't available during build
 # run any other commands that do not need the database
 # such as:
-RUN python manage.py collectstatic
+# RUN python manage.py collectstatic
 
 # set the Django default project name
 ARG PROJ_NAME="cfehome"
