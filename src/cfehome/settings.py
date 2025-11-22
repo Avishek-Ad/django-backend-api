@@ -27,7 +27,9 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", cast=str, default=None)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", cast=bool, default=False)
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [".railway.app"]
+
+CSRF_TRUSTED_ORIGIN = ["http://*.railway.app", "https://*.railway.app"]
 
 # Application definition
 
