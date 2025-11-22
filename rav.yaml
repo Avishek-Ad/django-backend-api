@@ -1,0 +1,7 @@
+scripts:
+  server:
+    - python manage.py runserver
+  curl_auth:
+    - curl -X POST -H "Content-Type:application/json" -d '{"username":"admin", "password":"admin"}' http://127.0.0.1:8000/api/token/pair
+  curl_protect:
+    - curl -X GET -H "Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzNzA2NzgzLCJpYXQiOjE3NjM3MDMxODMsImp0aSI6IjdkOTYyY2M1NzU3ZDRmMTI5ZjNiOTJjY2VmMWI3YWNmIiwidXNlcl9pZCI6MX0.bzVU-7mkBZo2L-S5xZWJtCFGdRTtuMDvHD14_jyXZRA" http://127.0.0.1:8000/api/me
